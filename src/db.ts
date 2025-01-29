@@ -1,5 +1,7 @@
-require('dotenv').config();
-const mysql = require('mysql2');
+import { config } from 'dotenv';
+import mysql from 'mysql2';
+
+config();
 
 const connection = mysql.createConnection({
   host: process.env.DB_HOST,
@@ -7,11 +9,6 @@ const connection = mysql.createConnection({
   password: process.env.DB_PASS,
   database: process.env.DB_NAME
 });
-
-// define('DB_HOST', 'www.iasdcentraldebrasilia.com.br');
-// define('DB_USER', 'iasdc624_sgcs_ad');
-// define('DB_PASS', 'F_!cs)E88}E[');
-// define('DB_NAME', 'iasdc624_sgcs');
 
 connection.connect((err) => {
   if (err) {
@@ -21,4 +18,4 @@ connection.connect((err) => {
   console.log('Conectado ao banco de dados MySQL.');
 });
 
-module.exports = connection;
+export default connection;
