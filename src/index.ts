@@ -16,6 +16,6 @@ app.use(bodyParser.json());
 app.use('/cadastros', cadastroRoutes);
 app.use('/cad', cadRoutes);
 
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Servidor rodando em http://localhost:${port}`);
+// });
