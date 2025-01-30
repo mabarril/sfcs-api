@@ -3,10 +3,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const dotenv_1 = require("dotenv");
-const mysql2_1 = __importDefault(require("mysql2"));
-(0, dotenv_1.config)();
-const connection = mysql2_1.default.createConnection({
+// filepath: src/db.ts
+const mysql2_1 = require("mysql2");
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
+const connection = (0, mysql2_1.createConnection)({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,

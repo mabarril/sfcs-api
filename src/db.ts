@@ -1,9 +1,10 @@
-import { config } from 'dotenv';
-import mysql from 'mysql2';
+// filepath: src/db.ts
+import { createConnection } from 'mysql2';
+import dotenv from 'dotenv';
 
-config();
+dotenv.config();
 
-const connection = mysql.createConnection({
+const connection = createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
