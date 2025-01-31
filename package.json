@@ -1,4 +1,7 @@
 {
+  "name": "crud-api",
+  "version": "1.0.0",
+  "description": "API RESTful para CRUD em uma tabela cadastro",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -11,3 +14,4 @@
 }
 
 }
+
